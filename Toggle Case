@@ -1,0 +1,23 @@
+#Toggle Case
+1. You are given a string that contains only lowercase and uppercase alphabets. 
+2. You have to toggle the case of every character of the given string.
+
+Constraints
+1 <= length of string <= 1000
+
+Format
+Input
+A String
+
+Output
+A String
+
+Example
+Sample Input
+
+pepCODinG
+
+Sample Output
+PEPcodINg
+
+Solution Java
