@@ -1,0 +1,65 @@
+1. You are given a string. 
+2. You have to print all palindromic substrings of the given string.
+
+Constraints
+1 <= length of string <= 500
+
+Format
+Input
+A String
+
+Output
+All palindromic substrings(one in a line).
+First, all palindromic substrings starting from first character of string will be printed, then from second character and so on.
+
+Example
+Sample Input
+
+abcc
+
+Sample Output
+a
+b
+c
+cc
+c
+
+#Java Solution
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static boolean isPalindrome(String str){
+		int i=0;
+		int j=str.length()-1;
+		while(i<=j){
+			if(str.charAt(i)!=str.charAt(j)){
+				return false;
+			}
+			i++;
+			j--;
+		}
+		return true;
+	}
+
+	public static void solution(String str){
+		//write your code here
+		for(int i=0;i<str.length();i++)
+		{
+			for(int j=i+1;j<=str.length();j++){
+				if(isPalindrome(str.substring(i,j))){
+					System.out.println(str.substring(i,j));
+				}
+			}
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		solution(str);
+	}
+
+}
